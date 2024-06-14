@@ -4,3 +4,47 @@ body {
     /* font-family: "DM Serif Display", serif; */
     font-family: "Jost", sans-serif;
 }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 43px;
+    padding-bottom: 45px;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.header__item {
+    margin-left: 48px;
+}
+
+.header__item:last-child {
+    margin-left: 30px;
+}
+
+.header__link {
+    color: #292f36;
+    font-size: 20px;
+    line-height: 1.25;
+    text-decoration: none;
+}
+
+.header__search {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    display: flex;
+}
