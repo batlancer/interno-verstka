@@ -1,8 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Утилитарные стили */
+
 body {
     /* font-family: "DM Serif Display", serif; */
     font-family: "Jost", sans-serif;
+    font-size: 22px;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    margin: 0;
+    background-image: url(/img/line.svg);
+    background-repeat: repeat-y;
+    background-position: center;
+    color: #292F36;
 }
 
 .container {
@@ -11,6 +21,42 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 }
+
+.title-2 {
+    font-family: "DM Serif Display", serif;
+    font-size: 50px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    margin: 0;
+}
+
+.btn {
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 125%;
+    letter-spacing: 0.02em;
+    color: #fff;
+    border: none;
+    box-shadow: 0 10px 20px 0 rgba(192, 192, 192, 0.35);
+    background: #292f36;
+    border-radius: 18px;
+    padding: 26px 56px 26px 31px;
+    position: relative;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    background-image: url(/img/arrow.svg);
+}
+
+/* Стили по блокам */
 
 .header {
     display: flex;
@@ -33,6 +79,8 @@ body {
 
 .header__item:last-child {
     margin-left: 30px;
+    display: flex;
+    align-items: center;
 }
 
 .header__link {
@@ -40,6 +88,11 @@ body {
     font-size: 20px;
     line-height: 1.25;
     text-decoration: none;
+    transition: .3s;
+}
+
+.header__link:hover {
+    color: #CDA274;
 }
 
 .header__search {
@@ -47,4 +100,239 @@ body {
     border: none;
     background-color: transparent;
     display: flex;
+    cursor: pointer;
+}
+
+.header__search svg {
+    stroke: #141414;
+    transition: .3s;
+}
+
+.header__search:hover svg {
+    stroke: #CDA274;
+}
+
+.footer {
+    background-color: #f4f0ec;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 90px;
+}
+
+
+.footer__address {
+    max-width: 253px;
+    font-style: normal;
+}
+
+.overlay {
+    position: fixed;
+    top: -100vh;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: .3s;
+}
+
+.modal-search {
+    background-color: #fff;
+    padding-top: 47px;
+    padding-bottom: 47px;
+}
+
+.form-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 40px;
+}
+
+.form-search__input {
+    max-width: 1046px;
+    display: flex;
+    flex-grow: 1;
+    height: 45px;
+    border: none;
+    border-bottom: 1px #000 solid;
+    font-size: 22px;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    color: #4d5053;
+    outline: none;
+}
+
+.form-search__input::placeholder {
+    font-size: 22px;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    color: #4d5053;
+
+}
+
+.form-search__submit {
+    border: 1px #CDA274 solid;
+    width: 52px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.form-search__submit:hover {
+    background-color: #CDA274;
+}
+
+.form-search__submit svg {
+    stroke: #292F36;
+}
+
+.form-search__submit:hover svg {
+    stroke: #fff;
+}
+
+.form-search__close {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    aspect-ratio: 1;
+    cursor: pointer;
+}
+
+.form-search__close svg {
+    fill: #292F36;
+    transition: .3s;
+}
+
+.form-search__close:hover svg {
+    fill: #CDA274;
+}
+
+.hero {
+    position: relative;
+    height: calc(100vh - 165px);
+    min-height: 400px;
+    max-height: 1042px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-radius: 0 0 0 30vh;
+}
+
+.hero__img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero>.container {
+    flex-basis: 100%;
+}
+
+.hero__title {
+    font-size: 85px;
+    font-family: "DM Serif Display", serif;
+    line-height: 1.25;
+    margin: 0;
+    max-width: 560px;
+}
+
+.hero__text {
+    max-width: 560px;
+}
+
+.about {
+    padding-top: 196px;
+    padding-bottom: 198px;
+}
+
+.about>.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 75px;
+}
+
+.about__info {
+    flex-basis: calc(100% - 700px);
+}
+
+.about__info>.title-2 {
+    max-width: 430px;
+    margin-bottom: 33px;
+}
+
+
+.about__info>p {
+    max-width: 475px;
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+.about__info>p:last-of-type {
+    margin-bottom: 45px;
+}
+
+.about__phone {
+    max-width: 280px;
+    margin-bottom: 45px;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.about__phone-img {
+    flex-basis: 93px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #F4F0EC;
+}
+
+.about__phone-inner>p {
+    margin: 0;
+}
+
+.about__phone-number {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.about__img {
+    flex-basis: 653px;
+    max-height: 700px;
+    border-radius: 0 35vh 0 15vh;
+    overflow: hidden;
 }
