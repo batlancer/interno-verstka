@@ -31,6 +31,12 @@ body {
     padding-right: 15px;
 }
 
+.content {
+    display: grid;
+    grid-template-columns: 1fr 345px;
+    column-gap: 52px;
+}
+
 .page {
     padding-top: 178px;
     padding-bottom: 178px;
@@ -791,9 +797,13 @@ body {
     color: inherit;
 }
 
-.article-last {}
+.article-last {
+    margin-bottom: 150px;
+}
 
-.artilce-last__title {}
+.artilce-last__title {
+    margin-bottom: 27px;
+}
 
 .article-last__wrapper {
     padding: 22px;
@@ -807,6 +817,17 @@ body {
     height: 478px;
     border-radius: 50px;
     overflow: hidden;
+    position: relative;
+}
+
+.article-last__thumb img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .article-last__content {
@@ -839,6 +860,11 @@ body {
     justify-content: space-between;
 }
 
+.article__title {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
 .pagination {
     display: flex;
     justify-content: center;
@@ -864,6 +890,8 @@ body {
 
 .pagination>span {
     pointer-events: none;
+    border-color: #F4F0EC;
+    background-color: #F4F0EC;
 }
 
 .pagination>a:hover {
@@ -872,6 +900,64 @@ body {
 }
 
 .pagination-next {
-    position: absolute;
-
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(/img/pagination-arrow.svg);
 }
+
+.widget {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.sidebar>.widget:first-child {
+    margin-top: 0;
+}
+
+/* Виджет поиска */
+
+.widget-search__form {
+    position: relative;
+}
+
+.widget-search__input {
+    width: 100%;
+    padding: 33px;
+    border: none;
+    border-radius: 20px;
+    font-size: 22px;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    color: #cda274;
+    outline: none;
+    background-color: #f4f0ec;
+}
+
+.widget-search__input::placeholder {
+    font-size: 22px;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    color: #cda274;
+}
+
+.widget-search__btn {
+    position: absolute;
+    top: 50%;
+    right: 33px;
+    transform: translateY(-50%);
+    width: 27px;
+    height: 27px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: url(/img/widget-search-icon.svg);
+}
+
+.widget-latest {}
+
+.widget-category {}
+
+.widget-tags {}
+
+.widget__title {}
