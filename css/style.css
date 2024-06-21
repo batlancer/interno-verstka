@@ -25,7 +25,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1230px;
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
@@ -1151,12 +1151,127 @@ body {
     font-size: 30px;
 }
 
-.post p {
+.post-body p {
     text-align: justify
 }
 
-.post ul,
-.post ol {
+.post-body ul,
+.post-body ol {
     list-style-type: none;
     padding-left: 0;
+}
+
+.post-body ol {
+    counter-reset: item;
+}
+
+.post-body ul>li,
+.post-body ol>li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.post-body ul>li+li,
+.post-body ol>li+li {
+    margin-top: 1em;
+}
+
+.post-body ul>li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 15px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #cda274;
+}
+
+.post-body ol>li::before {
+    content: '';
+    content: counter(item);
+    counter-increment: item;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    font-family: "DM Serif Display", serif;
+    font-size: 20px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    color: #cda274;
+}
+
+.post-body blockquote {
+    padding-top: 115px;
+    padding-bottom: 53px;
+    padding-left: 11vw;
+    padding-right: 11vw;
+    margin-inline: 0;
+    text-align: center;
+
+    font-family: "DM Serif Display", serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 125%;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #cda274;
+
+    border-radius: 50px;
+    background-color: #f4f0ec;
+
+    position: relative;
+}
+
+.post-body blockquote::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(/img/quotes-post-page.svg);
+    width: 74px;
+    height: 55px;
+}
+
+.post-body a {
+    text-decoration: none;
+    color: #cda274;
+}
+
+.post__thumb {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 539px;
+    border-radius: 50px;
+    margin-bottom: 46px;
+}
+
+.post-body figure {
+    margin-inline: 0;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 365px;
+    border-radius: 50px;
+}
+
+.post__thumb img,
+.post-body figure img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.post__date {
+    font-size: 16px;
+    text-transform: capitalize;
 }
