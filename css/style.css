@@ -57,6 +57,7 @@ body {
 }
 
 .btn {
+    display: inline-block;
     font-family: inherit;
     font-weight: 600;
     font-size: 18px;
@@ -70,6 +71,7 @@ body {
     padding: 26px 56px 26px 31px;
     position: relative;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .btn::after {
@@ -81,6 +83,14 @@ body {
     transform: translateY(-50%);
     right: 30px;
     background-image: url(/img/arrow.svg);
+}
+
+.btn-big {
+    padding: 26px 78px 26px 54px;
+}
+
+.btn-big::after {
+    right: 55px;
 }
 
 /* Стили по блокам */
@@ -1563,8 +1573,6 @@ body {
     align-items: center;
 }
 
-.contact__social-item {}
-
 .contact__form {
     flex-grow: 1;
 }
@@ -1572,4 +1580,59 @@ body {
 .contact .contact-us__btn {
     margin: unset;
     margin-left: auto;
+}
+
+
+.error {
+    position: relative;
+    padding-top: 295px;
+    padding-bottom: 295px;
+}
+
+.error__title {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-size: 250px;
+    line-height: 1;
+    color: #cda274;
+    margin: 0;
+    max-width: 569px;
+}
+
+.error__text {
+    font-family: "DM Serif Display", serif;
+    font-size: 35px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: #292f36;
+    margin: 0;
+    max-width: 569px;
+    margin-bottom: 23px;
+}
+
+
+.error__bg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 47%;
+    height: 100%;
+}
+
+.error_thumb {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 0 clamp(100px, 17vw, 353px);
+}
+
+.error__img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
 }
