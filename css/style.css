@@ -1151,6 +1151,10 @@ body {
     font-size: 30px;
 }
 
+.post article {
+    margin-bottom: 60px;
+}
+
 .post-body p {
     text-align: justify
 }
@@ -1333,4 +1337,239 @@ body {
     to {
         opacity: 1;
     }
+}
+
+.content__footer {
+    padding-top: 44px;
+    padding-bottom: 44px;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content__tags {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.content__tags-title {
+    font-family: "DM Serif Display", serif;
+    font-size: 20px;
+    line-height: 1.25;
+    color: #000;
+}
+
+.content__tags-list {
+    display: flex;
+    column-gap: 20px;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.content__tags-item a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 13px 25px;
+    background-color: #f4f0ec;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.content__tags-item a:hover {
+    background-color: #292f36;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.content__social {}
+
+.content__social-list {
+    display: flex;
+    column-gap: 54px;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.content__form .contact-us__btn {
+    margin: unset;
+}
+
+/* Стили чекбокса */
+
+.contact-us__checkbox {
+    grid-column: 1 / 3;
+}
+
+.checkbox:checked,
+.checkbox:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+.checkbox:checked+label,
+.checkbox:not(:checked)+label {
+    position: relative;
+    padding-left: 27px;
+    cursor: pointer;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    color: #cda274;
+}
+
+.checkbox:checked+label::before {
+    content: '';
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: 0;
+    top: calc(50% - 8px);
+    background-color: transparent;
+    border-radius: 2px;
+    border: 2px solid #cda274;
+}
+
+.checkbox:checked+label::after {
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    transition: all .2s ease;
+    opacity: 1;
+    left: 3px;
+    top: calc(50% - 5px);
+    background-color: #cda274;
+}
+
+.checkbox:not(:checked)+label::before {
+    content: '';
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: 0;
+    top: calc(50% - 8px);
+    background-color: transparent;
+    border-radius: 2px;
+    border: 2px solid #5d575f;
+}
+
+.checkbox:not(:checked)+label::after {
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    transition: all .2s ease;
+    opacity: 0;
+    left: 3px;
+    top: calc(50% - 5px);
+    background-color: #7d25a9;
+}
+
+.radio:checked+label::before,
+.radio:not(:checked)+label::before {
+    border-radius: 100%;
+}
+
+.contact__text {
+    max-width: 685px;
+    text-align: center;
+    margin: 0 auto 80px;
+}
+
+.contact__inner {
+    display: flex;
+    column-gap: 55px;
+    align-items: start;
+}
+
+.contact__info {
+    flex-basis: 349px;
+    flex-grow: 0;
+    padding: 76px 32px;
+    background-color: #f4f0ec;
+    border-radius: 50px;
+}
+
+.contact__links,
+.contact__social-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.contact__links {
+    margin-bottom: 47px;
+}
+
+.contact__link a {
+    padding-left: 77px;
+    display: block;
+    position: relative;
+    padding-top: 11px;
+    padding-bottom: 11px;
+
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: #4d5053;
+}
+
+.contact__link a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.contact__link.mail a::before {
+    background-image: url(../img/contact-icon/mail.svg);
+}
+
+.contact__link.phone a::before {
+    background-image: url(../img/contact-icon/phone.svg);
+}
+
+.contact__link.domain a::before {
+    background-image: url(../img/contact-icon/earth.svg);
+}
+
+.contact__link+.contact__link {
+    margin-top: 30px;
+}
+
+.contact__social-list {
+    display: flex;
+    column-gap: 35px;
+    align-items: center;
+}
+
+.contact__social-item {}
+
+.contact__form {
+    flex-grow: 1;
+}
+
+.contact .contact-us__btn {
+    margin: unset;
+    margin-left: auto;
 }
