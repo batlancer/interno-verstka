@@ -1655,11 +1655,15 @@ body {
     }
 
     .container {
-        width: 930px;
+        max-width: 930px;
     }
 
     .title-2 {
         font-size: 40px;
+    }
+
+    .title-3 {
+        font-size: 20px;
     }
 
     .error {
@@ -1751,5 +1755,24 @@ body {
 
     .clients__list {
         flex-wrap: wrap;
+    }
+
+    .article__list {
+        gap: 15px;
+    }
+
+    .article__item,
+    .article-last__wrapper {
+        padding: 16px 16px 33px 16px;
+    }
+
+    .article__item-title {
+        margin-bottom: 20px;
+    }
+
+    .tab-content__box img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
     }
 }
