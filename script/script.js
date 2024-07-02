@@ -6,6 +6,12 @@ function openModal() {
 function closeModal() {
     document.getElementById('overlay').style.top = '-100vh';
 }
+function openMenu() {
+    document.getElementById('overlayMenu').style.top = '0px';
+}
+function closeMenu() {
+    document.getElementById('overlayMenu').style.top = '-100vh';
+}
 
 // Tabs
 
