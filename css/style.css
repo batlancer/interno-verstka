@@ -1848,6 +1848,67 @@ body {
     }
 }
 
+@media (max-width: 1024px) {
+    .contact__inner {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .contact__info {
+        order: 2;
+        flex-basis: auto;
+        width: 100%;
+        padding: 50px 20px;
+    }
+
+    .contact__links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .contact__link+.contact__link {
+        margin-top: unset;
+    }
+
+    .contact__link a::before {
+        width: 44px;
+        height: 44px;
+    }
+
+    .contact__link a {
+        padding-left: 55px;
+        font-size: 18px;
+    }
+
+    .contact__social-list {
+        justify-content: center;
+    }
+
+    .contact__form {
+        flex-grow: 1;
+        flex-basis: auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .contact__link a {
+        padding-left: 0;
+        padding-top: 55px;
+        font-size: 16px;
+    }
+
+    .contact__link a::before {
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+}
+
 @media (max-width: 768px) {
     .container {
         max-width: 600px;
@@ -1981,6 +2042,17 @@ body {
     .footer__address {
         text-align: right;
     }
+
+    .tabs {
+        margin-bottom: 40px;
+    }
+
+    .tab-btn {
+        font-size: 16px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
 }
 
 @media (max-width: 600px) {
@@ -2037,6 +2109,20 @@ body {
         grid-column: unset;
     }
 
+    .tabs {
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+        max-width: 440px;
+    }
+
+    .tab-btn {
+        flex-basis: 50%;
+    }
+
+    .tab-content__box {
+        gap: 15px;
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 576px) {
@@ -2078,5 +2164,25 @@ body {
     .footer__mail,
     .footer__tel {
         text-align: center;
+    }
+
+    .contact__link a {
+        padding-left: 55px;
+        padding-top: 11px;
+        font-size: 16px;
+    }
+
+    .contact__link a::before {
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+    }
+
+    .contact__links {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
     }
 }
